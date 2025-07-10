@@ -26,7 +26,11 @@ This project uses LangChain’s built-in YoutubeLoader to extract transcript tex
 <img width="971" height="282" alt="image" src="https://github.com/user-attachments/assets/7130eaf4-675c-48ba-8263-8b55db9ebabb" />
 
 1.Document Loading: We load the transcript from a YouTube video using `YoutubeLoader`.
+
 2.Splitting: The text is split into smaller chunks using `RecursiveCharacterTextSplitter`.
+
 3.Storage: The chunks are converted into embeddings and stored in a Chroma vector database.
+
 4.Retrieval: When a user asks a question, we search the vector store for the most relevant chunks.
+
 5.Output: The relevant chunks + question are sent to the LLM (Gemma), and the answer is returned.
